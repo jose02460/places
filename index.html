@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Places I've been too.</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+      <div class="container-fluid">
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <h1 class="display-3">Places I've been to.</h1>
+            <p class="lead">This is a webpage of places I've been to.</p>
+            <hr class="my-4">
+            <form id="new-place">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="inputLocation">Location</label>
+                    <input type="text" class="form-control" id="inputLocation" placeholder="Enter Location">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="inputLandmark">Landmark</label>
+                    <input type="text" class="form-control" id="inputLandmark" placeholder="Enter Landmark">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="inputDate">Date</label>
+                    <input type="text" class="form-control" id="inputDate" placeholder="Enter Landmark">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="inputNote">Notes</label>
+                    <input type="area" class="form-control" id="inputNote" placeholder="Enter Notes">
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <ul id="places">
+          <div id="card-cont">
+
+          </div>
+          <!-- <div class="card mb-3">
+            <div class="card-body">
+              <h4 class="card-title">Dubai</h4>
+              <h6 class="card-subtitle mb-2 text-muted">Abu Dhabi</h6>
+              <p class="card-text">Abu Dhabi, the capital of the United Arab Emirates, sits off the mainland on an island in the Persian (Arabian) Gulf.</p>
+              <a href="#" class="card-link">More Info</a>
+            </div>
+          </div>
+
+          <div class="card mb-3">
+            <div class="card-body">
+              <h4 class="card-title">London</h4>
+              <h6 class="card-subtitle mb-2 text-muted">Manchester</h6>
+              <p class="card-text">London, the capital of England and the United Kingdom, is a 21st-century city with history stretching back to Roman times.</p>
+              <a href="#" class="card-link">More Info</a>
+            </div>
+          </div>
+          <div class="card mb-3">
+            <div class="card-body">
+              <h4 class="card-title">Pennsylvania</h4>
+              <h6 class="card-subtitle mb-2 text-muted">Philadelphia</h6>
+              <p class="card-text">Pennsylvania, a northeastern U.S. state and one of the 13 original colonies, has a diverse terrain, which includes wide stretches of farmland, national forests and mountains. </p>
+              <a href="#" class="card-link">More Info</a>
+            </div>
+          </div> -->
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul id="places">
+          <!-- <div class="card mb-3">
+            <div class="card-body">
+              <h4 class="card-title">Mexico</h4>
+              <h6 class="card-subtitle mb-2 text-muted">Chihuahua, Mexico and Jalisco, Mexico</h6>
+              <p class="card-text">Chihuahua City is the capital of the northwestern Mexican state of Chihuahua. Jalisco is a western Mexican state fringing the Pacific Ocean. The state is known for mariachi music and tequila, both of which reportedly originated here.</p>
+              <a href="#" class="card-link">More Info</a>
+              <a href="#" class="card-link">More Info</a>
+            </div>
+          </div>
+
+          <div class="card mb-3">
+            <div class="card-body">
+              <h4 class="card-title">California</h4>
+              <h6 class="card-subtitle mb-2 text-muted">Los Angeles</h6>
+              <p class="card-text">California, a western U.S. state, stretches from the Mexican border along the Pacific for nearly 900 miles. Its terrain includes cliff-lined beaches, redwood forest, the Sierra Nevada Mountains, Central Valley farmland and the Mojave Desert.</p>
+              <a href="#" class="card-link">More Info</a>
+            </div>
+          </div>
+          <div class="card mb-3">
+            <div class="card-body">
+              <h4 class="card-title">Nevada</h4>
+              <h6 class="card-subtitle mb-2 text-muted">Las Vegas</h6>
+              <p class="card-text">Las Vegas, in Nevada’s Mojave Desert, is a resort city famed for its vibrant nightlife, centered around 24-hour casinos and other entertainment options.</p>
+              <a href="#" class="card-link">More Info</a>
+            </div>
+          </div> -->
+        </ul>
+      </div>
+
+      <div class="col-md-6">
+        <div id="show-contact">
+          <h2></h2>
+
+          <p>First name: <span class="first-name"></span></p>
+          <p>Last name: <span class="last-name"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </body>
+</html>
